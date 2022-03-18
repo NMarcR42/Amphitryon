@@ -5,12 +5,12 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-public class MenuEtudiantActivity extends AppCompatActivity {
+public class MenuServeurActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_etudiant);
+        setContentView(R.layout.activity_menu_serveur);
         /*
         try {
             final JSONObject etudiant = new JSONObject(getIntent().getStringExtra("etudiant"));

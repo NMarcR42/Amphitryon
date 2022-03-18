@@ -12,16 +12,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Amphitryon">
-
-
         <activity
-            android:name="com.example.amphitryon.MenuProfActivity"
-            android:exported="false" />
-
-        <activity android:name="com.example.amphitryon.MenuEtudiantActivity"
+            android:name=".MenuCuisinierActivity"
             android:exported="false" />
         <activity
-            android:name="com.example.amphitryon.MainActivity"
+            android:name=".MenuSalleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuServeurActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

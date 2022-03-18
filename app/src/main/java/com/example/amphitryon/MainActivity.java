@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://10.100.0.5/~gubbiottip/%c3%a9tudiants/modeles/dao/authentification.php")
+                .url("http://192.168.43.91/amphitryon/modeles/dao/authentification.php")
                 .post(formBody)
                 .build();
 
@@ -74,21 +75,26 @@ public class MainActivity extends AppCompatActivity {
 
                 if (responseStr.compareTo("false")!=0){
                     try {
-                        JSONObject etudiant = new JSONObject(responseStr);
-                        Log.d("Test",etudiant.getString("nomEtudiant") + " est  connecté");
-                        if(etudiant.getString("statut").compareTo("prof")!=0) {
-                            Intent intent = new Intent(MainActivity.this, MenuEtudiantActivity.class);
-                            intent.putExtra("etudiant", etudiant.toString());
+                        JSONObject utilisateur = new JSONObject(responseStr);
+                        Log.d("Test",utilisateur.getString("nom") + " est  connecté");
+                        if(utilisateur.getString("statut").compareTo("salle")==0) {
+                            Intent intent = new Intent(MainActivity.this, MenuSalleActivity.class);
+                            intent.putExtra("utilisateur", utilisateur.toString());
                             startActivity(intent);
                         }
-                        else {
-                          /*  Intent intent = new Intent(MainActivity.this, MenuProfActivity.class);
-                            intent.putExtra("etudiant", etudiant.toString());
-                            startActivity(intent);*/
+                        else if(utilisateur.getString("statut").compareTo("cuisinier")==0) {
+                            Intent intent = new Intent(MainActivity.this, MenuCuisinierActivity.class);
+                            intent.putExtra("utilisateur", utilisateur.toString());
+                            startActivity(intent);
+                        }
+                       else if(utilisateur.getString("statut").compareTo("serveur")==0) {
+                            Intent intent = new Intent(MainActivity.this, MenuServeurActivity.class);
+                            intent.putExtra("utilisateur", utilisateur.toString());
+                            startActivity(intent);
                         }
                     }
                     catch(JSONException e){
-                        // Toast.makeText(MainActivity.this, "Erreur de connexion !!!! !", Toast.LENGTH_SHORT).show();
+                        Log.d("Test",e.getMessage());
                     }
                 } else {
                     Log.d("Test","Login ou mot de  passe non valide !");
@@ -98,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             public void onFailure(Call call, IOException e)
             {
                 Log.d("Test","erreur!!! connexion impossible");
+                Log.d("Test",e.getMessage());
             }
 
         });

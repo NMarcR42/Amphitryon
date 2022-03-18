@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="178dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/sio"
+        android:src="@drawable/logo"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
@@ -22,7 +22,7 @@
         android:id="@+id/buttonLesClasses"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:text="Les classes"
+        android:text="CUISINIER"
         android:textSize="25sp"
         android:paddingHorizontal="40dp"
         android:layout_marginTop="50dp"
@@ -31,14 +31,25 @@
         app:layout_constraintTop_toBottomOf="@+id/imagesSIO"/>
 
     <Button
-        android:id="@+id/buttonLesDevoirs"
+        android:id="@+id/buttonMaClasse"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:text="Les devoirs"
+        android:text="Ma classe"
         android:textSize="25sp"
         android:paddingHorizontal="50dp"
         app:layout_constraintLeft_toLeftOf="@+id/buttonLesClasses"
         app:layout_constraintTop_toBottomOf="@+id/buttonLesClasses"/>
+
+
+    <Button
+        android:id="@+id/buttonMesInfos"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="Mes infos"
+        android:textSize="25sp"
+        android:paddingHorizontal="40dp"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonLesClasses"
+        app:layout_constraintTop_toBottomOf="@+id/buttonMaClasse"/>
 
     <Button
         android:id="@+id/buttonQuitter"
@@ -48,6 +59,6 @@
         android:textSize="25sp"
         android:paddingHorizontal="40dp"
         app:layout_constraintLeft_toLeftOf="@+id/buttonLesClasses"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLesDevoirs"/>
+        app:layout_constraintTop_toBottomOf="@+id/buttonMesInfos"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
     <ImageView
         android:id="@+id/imagesSIO"
         android:layout_width="match_parent"
@@ -17,40 +15,65 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:text="Bienvenue Chef Cuisinier"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="218dp" />
 
     <Button
         android:id="@+id/buttonLesPlats"
-        android:layout_width="340dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="393dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="80dp"
         android:paddingHorizontal="40dp"
         android:text="Les PLats"
         android:textSize="25sp"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imagesSIO" />
 
     <Button
-        android:id="@+id/buttonAjouter"
-        android:layout_width="340dp"
+        android:id="@+id/buttonGererPlat"
+        android:layout_width="393dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:paddingHorizontal="50dp"
-        android:text="Ajouter un plat"
+        android:text="Gérer les plats"
         android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="@+id/buttonLesPlats"
         app:layout_constraintTop_toBottomOf="@+id/buttonLesPlats" />
+    <Button
+        android:id="@+id/buttonPropositionPlat"
+        android:layout_width="393dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="50dp"
+        android:text="Proposition de plat"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonGererPlat"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGererPlat" />
+    <Button
+        android:id="@+id/buttonTest"
+        android:layout_width="393dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="50dp"
+        android:text="test"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonPropositionPlat"
+        app:layout_constraintTop_toBottomOf="@+id/buttonPropositionPlat" />
 
     <Button
         android:id="@+id/buttonQuitter"
-        android:layout_width="340dp"
+        android:layout_width="393dp"
         android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:paddingHorizontal="40dp"
         android:text="Quitter"
         android:textSize="25sp"
-        app:layout_constraintLeft_toLeftOf="@+id/buttonAjouter"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAjouter" />
+        app:layout_constraintLeft_toLeftOf="@+id/buttonTest"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTest" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

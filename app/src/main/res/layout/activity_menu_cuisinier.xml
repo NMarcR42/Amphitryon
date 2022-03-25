@@ -19,46 +19,38 @@
 
 
     <Button
-        android:id="@+id/buttonLesClasses"
-        android:layout_width="300dp"
+        android:id="@+id/buttonLesPlats"
+        android:layout_width="340dp"
         android:layout_height="50dp"
-        android:text="CUISINIER"
-        android:textSize="25sp"
+        android:layout_marginTop="60dp"
         android:paddingHorizontal="40dp"
-        android:layout_marginTop="50dp"
+        android:text="Les PLats"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagesSIO"/>
+        app:layout_constraintTop_toBottomOf="@+id/imagesSIO" />
 
     <Button
-        android:id="@+id/buttonMaClasse"
-        android:layout_width="300dp"
+        android:id="@+id/buttonAjouter"
+        android:layout_width="340dp"
         android:layout_height="50dp"
-        android:text="Ma classe"
-        android:textSize="25sp"
+        android:layout_marginTop="8dp"
         android:paddingHorizontal="50dp"
-        app:layout_constraintLeft_toLeftOf="@+id/buttonLesClasses"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLesClasses"/>
-
-
-    <Button
-        android:id="@+id/buttonMesInfos"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:text="Mes infos"
+        android:text="Ajouter un plat"
         android:textSize="25sp"
-        android:paddingHorizontal="40dp"
-        app:layout_constraintLeft_toLeftOf="@+id/buttonLesClasses"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMaClasse"/>
+        app:layout_constraintLeft_toLeftOf="@+id/buttonLesPlats"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLesPlats" />
 
     <Button
         android:id="@+id/buttonQuitter"
-        android:layout_width="300dp"
+        android:layout_width="340dp"
         android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="40dp"
         android:text="Quitter"
         android:textSize="25sp"
-        android:paddingHorizontal="40dp"
-        app:layout_constraintLeft_toLeftOf="@+id/buttonLesClasses"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMesInfos"/>
+        app:layout_constraintLeft_toLeftOf="@+id/buttonAjouter"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAjouter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

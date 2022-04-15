@@ -1,16 +1,14 @@
-package com.example.amphitryon;
+package com.example.amphitryon.plat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.example.amphitryon.R;
 
 import java.io.IOException;
 
@@ -22,14 +20,14 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class GestionPlatActivity extends AppCompatActivity {
+public class ModifierPlatActivity extends AppCompatActivity {
     String responseStr ;
     OkHttpClient client = new OkHttpClient();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gestion_plat);
+        setContentView(R.layout.activity_modifier_plat);
 
         final Button buttonEnregistrer = (Button)findViewById(R.id.buttonEnregistrer);
         buttonEnregistrer.setOnClickListener(new View.OnClickListener() {
@@ -37,15 +35,16 @@ public class GestionPlatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Appel de la fonction ajouter
                 try {
-                    ajouter();
+                    modifier();
                 }catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-        });
 
+
+        });
     }
-    public void ajouter() throws IOException {
+    public void modifier() throws IOException {
 
         final EditText textNomPlat = findViewById(R.id.editNomPlat);
         final EditText textCategPlat = findViewById(R.id.editCategoriePlat);
@@ -60,7 +59,7 @@ public class GestionPlatActivity extends AppCompatActivity {
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://192.168.43.119/amphitryon/modeles/dao/PlatDAO.php")
+                .url("http://192.168.43.119/amphitryon/modeles/dao/plat.php")
                 .post(formBody)
                 .build();
 
@@ -79,8 +78,6 @@ public class GestionPlatActivity extends AppCompatActivity {
                 }
             }
 
-
-
             public void onFailure(Call call, IOException e)
             {
                 Log.d("Test","erreur!!! Action impossible");
@@ -89,6 +86,4 @@ public class GestionPlatActivity extends AppCompatActivity {
 
         });
     }
-
-
 }

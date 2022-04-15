@@ -1,10 +1,12 @@
-package com.example.amphitryon;
+package com.example.amphitryon.plat.platPropose;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ListView;
+
+import com.example.amphitryon.R;
 
 public class LesPlatsActivity extends AppCompatActivity {
 

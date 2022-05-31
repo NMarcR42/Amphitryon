@@ -13,10 +13,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Amphitryon">
         <activity
-            android:name=".LesPlatsActivity"
+            android:name=".plat.platPropose.SupprimerPlatProposeActivity"
             android:exported="false" />
         <activity
-            android:name=".GestionPlatActivity"
+            android:name=".plat.platPropose.ModifierPlatProposeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".plat.platPropose.GestionPlatProposeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".plat.platPropose.AjoutPlatProposeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".plat.Gestion.AjoutPlatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".plat.Gestion.SupprimerPlatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".plat.Gestion.ModifierPlatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".plat.Gestion.LesPlatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".plat.Gestion.GestionPlatActivity"
             android:exported="false" />
         <activity
             android:name=".MenuCuisinierActivity"

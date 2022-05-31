@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://192.168.43.119/amphitryon/modeles/dao/authentification.php")
+                .url("http://192.168.1.14/amphitryon/modeles/dao/authentification.php")
                 .post(formBody)
                 .build();
 

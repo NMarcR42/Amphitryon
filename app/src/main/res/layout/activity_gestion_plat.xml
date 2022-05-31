@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GestionPlatActivity">
+    tools:context=".plat.Gestion.GestionPlatActivity">
 
     <ImageView
         android:id="@+id/imagesSIO"
@@ -15,106 +15,59 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:layout_width="160dp"
-        android:layout_height="30dp"
-        android:text="Gérer les Plats"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="195dp" />
-
-    <EditText
-        android:id="@+id/editNomPlat"
-        android:layout_width="393dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="64dp"
-        android:text="Nom du plat"
-        android:textSize="25sp"
-        app:layout_constraintLeft_toLeftOf="@+id/imagesSIO"
-        app:layout_constraintTop_toBottomOf="@+id/imagesSIO" />
-
-    <EditText
-        android:id="@+id/editCategoriePlat"
-        android:layout_width="393dp"
-        android:layout_height="45dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="64dp"
-        android:text="Catégorie du plat"
-        android:textSize="25sp"
-        app:layout_constraintLeft_toLeftOf="@+id/editNomPlat"
-        app:layout_constraintTop_toBottomOf="@+id/editNomPlat" />
-
-    <EditText
-        android:id="@+id/editDescriptif"
-        android:layout_width="393dp"
-        android:layout_height="100dp"
-        android:text="Descriptif"
-        android:textSize="25sp"
-        app:layout_constraintLeft_toLeftOf="@+id/editCategoriePlat"
-        app:layout_constraintTop_toBottomOf="@+id/editCategoriePlat" />
-
-    <EditText
-        android:id="@+id/editPrixPlat"
-        android:layout_width="393dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
-        android:text="Prix"
-        android:textSize="25sp"
-        app:layout_constraintLeft_toLeftOf="@+id/editDescriptif"
-        app:layout_constraintTop_toBottomOf="@+id/editDescriptif" />
-
 
     <Button
-        android:id="@+id/buttonEnregistrer"
-        android:layout_width="270dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="64dp"
-        android:paddingHorizontal="40dp"
-        android:text="Enregistrer"
-        android:textSize="25sp"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editPrixPlat" />
-
-    <Button
-        android:id="@+id/buttonModifier"
-        android:layout_width="270dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="16dp"
-        android:paddingHorizontal="40dp"
-        android:text="Modifier"
-        android:textSize="25sp"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonEnregistrer" />
-
-    <Button
-        android:id="@+id/buttonSupprimer"
-        android:layout_width="270dp"
+        android:id="@+id/buttonAjouterPlat"
+        android:layout_width="385dp"
         android:layout_height="54dp"
         android:layout_marginTop="20dp"
         android:paddingHorizontal="40dp"
-        android:text="Supprimer"
+        android:text="Ajouter un plat"
         android:textSize="25sp"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonModifier" />
+        app:layout_constraintTop_toBottomOf="@+id/imagesSIO" />
+
+    <Button
+        android:id="@+id/buttonModifierPlat"
+        android:layout_width="385dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="40dp"
+        android:text="Modifier un plat"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAjouterPlat" />
+
+    <Button
+        android:id="@+id/buttonSupprimerPlat"
+        android:layout_width="385dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="40dp"
+        android:text="Supprimer un plat"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonModifierPlat" />
 
     <Button
         android:id="@+id/buttonQuitter"
-        android:layout_width="270dp"
+        android:layout_width="385dp"
         android:layout_height="54dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="20dp"
         android:paddingHorizontal="40dp"
         android:text="Quitter"
         android:textSize="25sp"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSupprimer" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSupprimerPlat" />
+
 
 
 

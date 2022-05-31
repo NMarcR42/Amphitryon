@@ -4,17 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Response;
+import com.example.amphitryon.plat.Gestion.GestionPlatActivity;
+import com.example.amphitryon.plat.platPropose.GestionPlatProposeActivity;
+import com.example.amphitryon.plat.Gestion.LesPlatsActivity;
 
 public class MenuCuisinierActivity extends AppCompatActivity {
     String responseStr ;
@@ -44,6 +39,15 @@ public class MenuCuisinierActivity extends AppCompatActivity {
 
         final Button buttonPropositionPlat = (Button)findViewById(R.id.buttonPropositionPlat);
         buttonPropositionPlat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuCuisinierActivity.this, GestionPlatProposeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        final Button buttonTest = (Button)findViewById(R.id.buttonTest);
+        buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MenuCuisinierActivity.this, GestionPlatActivity.class);

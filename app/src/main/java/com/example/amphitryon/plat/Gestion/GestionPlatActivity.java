@@ -1,30 +1,13 @@
-package com.example.amphitryon.plat;
+package com.example.amphitryon.plat.Gestion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
-import com.example.amphitryon.LesPlatsActivity;
-import com.example.amphitryon.MenuCuisinierActivity;
 import com.example.amphitryon.R;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 public class GestionPlatActivity extends AppCompatActivity {
 

@@ -6,4 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".plat.platPropose.AjoutPlatProposeActivity">
 
+    <ImageView
+        android:id="@+id/imagesSIO"
+        android:layout_width="match_parent"
+        android:layout_height="178dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:text="Gérer les Plats Proposée"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="195dp" />
+
+    <Spinner
+        android:id="@+id/spinneridPlat"
+        android:layout_width="383dp"
+        android:layout_height="41dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="48dp"
+        android:layout_weight="1"
+        app:layout_constraintLeft_toLeftOf="@+id/imagesSIO"
+        app:layout_constraintTop_toBottomOf="@+id/imagesSIO" />
+
+    <EditText
+        android:id="@+id/editIdService"
+        android:layout_width="393dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:hint="Service"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@+id/spinneridPlat"
+        app:layout_constraintTop_toBottomOf="@+id/spinneridPlat" />
+
+    <EditText
+        android:id="@+id/editDate"
+        android:layout_width="393dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:hint="AAAA-MM-JJ"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@+id/editIdService"
+        app:layout_constraintTop_toBottomOf="@+id/editIdService" />
+
+    <EditText
+        android:id="@+id/editQuantiteProposee"
+        android:layout_width="393dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:hint="quantitee proposee"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@+id/editDate"
+        app:layout_constraintTop_toBottomOf="@+id/editDate" />
+
+    <EditText
+        android:id="@+id/editQuantiteVendue"
+        android:layout_width="393dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:hint="quantitee vendue"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@+id/editQuantiteProposee"
+        app:layout_constraintTop_toBottomOf="@+id/editQuantiteProposee" />
+
+    <EditText
+        android:id="@+id/editPrixVente"
+        android:layout_width="393dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:hint="Prix de vente"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="@+id/editQuantiteVendue"
+        app:layout_constraintTop_toBottomOf="@+id/editQuantiteVendue" />
+
+    <Button
+        android:id="@+id/buttonEnregistrer"
+        android:layout_width="270dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="40dp"
+        android:paddingHorizontal="40dp"
+        android:text="Enregistrer"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPrixVente" />
+
+
+    <Button
+        android:id="@+id/buttonQuitter"
+        android:layout_width="270dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:paddingHorizontal="40dp"
+        android:text="Quitter"
+        android:textSize="25sp"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEnregistrer" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
